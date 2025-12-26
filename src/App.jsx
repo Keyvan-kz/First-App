@@ -786,13 +786,6 @@ let currenciesList = [
   },
 ];
 
-const btnColor = (dailyChange) => {
-  if (dailyChange >= 0) {
-    return "p-2 rounded-lg cursor-pointer bg-[#262626] text-white transition ease duration-200 hover:bg-green-800";
-  } else {
-    return "p-2 rounded-lg cursor-pointer bg-[#262626] text-white transition ease duration-200 hover:bg-red-500";
-  }
-};
 
 // const dailyChangeStyle = (change) => {
 //   if (change >= 0 ) {
@@ -920,7 +913,6 @@ function App() {
                           )
                         : "---"
                     }
-                    hoverColor={btnColor(Number(item?.quotes?.USDT?.change24h))}
                     dailyChange={
                       item.quotes?.USDT?.change24h
                         ? Number(item.quotes.USDT.change24h)

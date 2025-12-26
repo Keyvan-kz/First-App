@@ -8,7 +8,15 @@ function TradeCurrencyRow (props) {
       } else {
          return "---"
       }
-}
+   }
+
+   const btnColor = (dailyChange) => {
+  if (dailyChange >= 0) {
+    return "p-2 rounded-lg cursor-pointer bg-[#262626] text-white transition ease duration-200 hover:bg-green-800";
+  } else {
+    return "p-2 rounded-lg cursor-pointer bg-[#262626] text-white transition ease duration-200 hover:bg-red-500";
+  }
+};
 
 
    return (
@@ -18,7 +26,7 @@ function TradeCurrencyRow (props) {
         <td>{props.usdtPrice}</td>
         <td>{dailyChangeStyle(props.dailyChange)}</td>
         <td>{props.marketCap}</td>
-        <td><button className = {props.hoverColor}>خرید و فروش آنی</button></td>
+        <td><button className = {btnColor(props.dailyChange)}>خرید و فروش آنی</button></td>
     </tr>
     
 
