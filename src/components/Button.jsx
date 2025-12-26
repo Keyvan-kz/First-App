@@ -18,12 +18,7 @@ function Button(props) {
   return (
     <button
       disabled={props.disabled}
-      className={`flex justify-center cursor-pointer items-center  ${btnType(
-        props.type,
-        props.darkmode
-      )}`}
-    >
-      {props.text}
+      className={`flex justify-center cursor-pointer items-center  ${btnType(props.type,props.darkmode)}`}>{props.text}
     </button>
   );
 }

@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: wallex;
+  src: url(./assets/b0ad5761bb85c519-s.p.woff2);
+}
