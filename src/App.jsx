@@ -1,4 +1,5 @@
 import TradeCurrencyRow from "./components/tradecurrencyrow";
+import Input from "./components/input" ;
 
 let currenciesList = [
   {
@@ -787,17 +788,17 @@ let currenciesList = [
 ];
 
 
-// const dailyChangeStyle = (change) => {
-//   if (change >= 0 ) {
-//     return <p className = "text-green-800"> ${change?.toLocaleString('fa-IR')} </p>
-//   } else {
-//     return <p className = "text-red-500"> ${change?.toLocaleString('fa-IR')} </p>
-//   }
-// }
-
 function App() {
   return (
-    <section>
+    <>
+   <section className="flex justify-center items-center m-5">
+    <Input  />
+   </section> 
+    
+    
+    
+    
+    <section className="m-5">
       <div className="mt-15 m-auto text-center p-10 max-w-300 bg-white shadow-md rounded-lg">
         <h1 className="mb-15 text-2xl font-bold">
           خرید معتبرترین ارزهای بازار کریپتو
@@ -927,6 +928,7 @@ function App() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 
